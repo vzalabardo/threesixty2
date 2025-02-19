@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreeSixty Experience - Learn More</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Bai Jamjuree', sans-serif;
+      color: white;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.454) 0.15%, black 100%);
+      animation: fadeInPage 1.5s ease-in-out; /* Animación de desvanecimiento para toda la página */
+    }
+
+    @keyframes fadeInPage {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;  
+      background-size: cover;
+      position: relative; /* Para que el overlay cubra toda la pantalla */
+    }
+
+    /* Capa oscura encima del fondo */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65); /* Opacidad del overlay */
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2; /* Para que el contenido esté sobre el overlay */
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .separator {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      margin-top: 3px;
+      margin-bottom: 1px;
+    }
+
+    .middle {
+      flex-grow: 1; /* Ocupa todo el espacio disponible */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .middle h3 {
+      font-size: 26px;
+      color: rgb(224, 184, 109);
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .info-box {
+      border: 0px;
+      color: white;
+      font-size: 24px;
+      font-weight: 100 ;
+      padding: 0px 0px;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 0;
+      text-align: center;
+      opacity: 0; /* Comienza invisible */
+      animation: fadeInUp 1s forwards; /* Aparece y se mueve hacia arriba */
+    }
+
+    /* Definir la animación de aparición */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px); /* Comienza un poco hacia abajo */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* Llega a su posición normal */
+      }
+    }
+
+    /* Retrasos para que cada info-box aparezca en secuencia */
+    .info-box:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .info-box:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .info-box:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+
+    .info-box:nth-child(4) {
+      animation-delay: 2s;
+    }
+    .info-box:nth-child(5) {
+      animation-delay: 2.5s;
+    }
+
+    /* Estilos adicionales font-style: italic;*/
+    .italic {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .italic2 {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .invest {
+      color: rgb(224, 184, 109);
+      font-style: italic;
+      font-weight: bold;
+
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      padding-bottom: 15px;
+    }
+
+    .bottom button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 6px 32px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .bottom button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="overlay"></div> <!-- Capa oscura -->
+
+    <div class="content"> 
+      <!-- Zona superior -->
+      <div class="top">
+        <div class="logo">
+          <img src="assets/LogoBlanco.png" alt="Logo">
+        </div>
+        <div class="separator"></div>
+      </div>
+
+      <!-- Zona central -->
+      <div class="middle">
+        <div class="info-box" style="font-size: 25;"><span class="invest">But let’s be clear.</span></div>
+        <div class="info-box">What will you experience with us <br> this 2025?</div>
+        <div class="info-box">We don’t know yet. <br>
+          And neither do you.</div>
+        <div class="info-box" style="font-size: 25;"><span class="invest">Why?</span></div>
+        <div class="info-box">Because every member is a <strong> new <br>
+          story </strong> waiting to be written—a story <br>
+          shaped by your personality, your <br>
+          tastes, and your passions.
+      </div>
+
+      <!-- Zona inferior -->
+      <div class="bottom">
+        <a href="a2.html">
+          <button>NEXT</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreeSixty Experience - Learn More</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      font-family: 'Bai Jamjuree', sans-serif;
+      color: white;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.454) 0.15%, black 100%);
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;  
+      background-size: cover;
+      position: relative; /* Para que el overlay cubra toda la pantalla */
+    }
+
+    /* Capa oscura encima del fondo */
+
+
+    .content {
+      position: relative;
+      z-index: 2; /* Para que el contenido esté sobre el overlay */
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .separator {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      margin-top: 3px;
+      margin-bottom: 1px;
+    }
+
+    .middle {
+      flex-grow: 1; /* Ocupa todo el espacio disponible */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .middle h3 {
+      font-size: 26px;
+      color: rgb(224, 184, 109);
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .info-box {
+      border: 0px;
+      color: white;
+      font-size: 24px;
+      font-weight: 100 ;
+      padding: 0px 0px;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 0;
+      text-align: center;
+    }
+
+
+    /* Estilos adicionales font-style: italic;*/
+    .italic {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .italic2 {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .invest {
+      color: rgb(224, 184, 109);
+      font-weight: bold;
+
+    }
+
+    .image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .middle-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajusta la altura según sea necesario */
+  }
+
+      /* Estilo para la flecha estilizada */
+      .arrow {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 80px;
+  background-color: white;
+  margin-top: 20px;
+  opacity: 1; /* Asegura que sea visible */
+  transform: translateY(0px); /* Elimina desplazamiento inicial */
+  animation: fadeInUp 1s ease-out forwards;
+
+}
+
+    .arrow::after {
+      content: "";
+      position: absolute;
+      bottom: -10px; /* Mueve la punta más abajo */
+      left: 50%; /* Centra la punta */
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid white; /* Punta de la flecha */
+      transform: translateX(-50%); /* Centra la punta con el palo */
+
+    }
+
+    
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      padding-bottom: 15px;
+    }
+
+    .bottom button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 6px 32px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .bottom button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="overlay"></div> <!-- Capa oscura -->
+
+    <div class="content"> 
+      <!-- Zona superior -->
+      <div class="top">
+        <div class="logo">
+          <img src="assets/LogoBlanco.png" alt="Logo">
+        </div>
+        <div class="separator"></div>
+      </div>
+
+      <!-- Zona central -->
+      <div class="middle">
+        <div class="info-box" style="padding-top: 15px  ;" ><span class="invest">But let’s be clear.</span></div>
+        <div class="info-box" style="padding-top: 15px  ;">What will you experience with us this 2025?</div>
+        <div class="info-box" style="padding-top: 15px  ;" ><span class="invest">Why?</span></div>
+        <div class="info-box" style="padding-top: 15px  ;">Because every member is a <strong>new story</strong> and a <strong>new legacy</strong> waiting to be written—a story shaped by your personality, your tastes, and your passions. </div>
+
+
+      </div>  
+
+      <!-- Zona inferior -->
+      <div class="bottom">
+        <a href="a5.html">
+          <button>NEXT</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
