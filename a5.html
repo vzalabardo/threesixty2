@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreeSixty Experience - Learn More</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      font-family: 'Bai Jamjuree', sans-serif;
+      color: white;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.454) 0.15%, black 100%);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .separator {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      margin-top: 3px;
+      margin-bottom: 1px;
+    }
+
+    .middle {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .middle h3 {
+      font-size: 26px;
+      color: rgb(224, 184, 109);
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .info-box {
+      color: white;
+      font-size: 24px;
+      font-weight: 100;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .italic {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .italic2 {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .invest {
+      color: rgb(224, 184, 109);
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .middle-image {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .accordion {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .accordion-item {
+      border: 2px solid white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .accordion-title {
+      background-color: black;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .arrow-container {
+      width: 30px; /* Tamaño del círculo */
+      height: 30px;
+      background-color: transparent; /* Fondo transparente */
+      border: 2px solid rgb(224, 184, 109); /* Borde con color */
+      border-radius: 50%; /* Hace el círculo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      
+    }
+
+    .arrow-down {
+      font-size: 16px;
+      color: rgb(224, 184, 109); /* Color de la flecha */
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+
+    .accordion-content p {
+      margin-bottom: 10px;
+    }
+
+    .accordion-content p strong {
+    color: rgb(224, 184, 109); /* Azul, puedes cambiarlo a cualquier otro color */
+    padding-bottom: 8px;
+  }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      padding-bottom: 15px;
+    }
+
+    .bottom button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 6px 32px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .bottom button:hover {
+      background: white;
+      color: black;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content"> 
+      <div class="top">
+        <div class="logo">
+          <img src="assets/LogoBlanco.png" alt="Logo">
+        </div>
+        <div class="separator"></div>
+      </div>
+
+      <div class="middle">
+        <div class="info-box"><span class="invest">Still Curious? <br> We get it.</span></div>
+        <div class="info-box">You have questions. <br> We have answers.</div>
+
+        <div class="info-box" style="text-decoration: underline; padding-bottom: 8px;">FAQ's</div>
+        
+        <div class="accordion">
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  Membership & Access <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>How many members are there in the club?</strong><br>The club is limited to 25 Founding Members and 125 General Members to ensure exclusivity.</p>
+                  <p><strong>How long does the membership process take?</strong><br>The average waiting time is 30 to 45 days.</p>
+                  <p><strong>How will I know if I’ve been accepted or denied?</strong><br>You will be contacted via email with the final decision.</p>
+                  <p><strong>Can I transfer my membership?</strong><br>No, memberships are non-transferable.</p>
+                  <p><strong>What if I cancel my membership?</strong><br>Please check the membership bylaws for details.</p>
+              </div>
+          </div>
+          
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  Car Ownership, Logistics & Storage <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>Can I own my own car?</strong><br>Yes, most members have their private collection.</p>
+                  <p><strong>What is the benefit of buying a car through ThreeSixty?</strong><br>Vehicles will be registered in Andorra, offering savings of 30-35%.</p>
+                  <p><strong>Where will my car be stored?</strong><br>Members can store their vehicles in Andorra or Barcelona.</p>
+              </div>
+          </div>
+          
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  Driving Experiences & Track Days <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>How often can I participate in track days?</strong><br>Members receive a calendar with 6 pre-organized F1 track days per year.</p>
+                  <p><strong>What racing circuits does ThreeSixty have access to?</strong><br>We have access to almost all F1 circuits worldwide.</p>
+                  <p><strong>Do I need prior track experience?</strong><br>No. The club provides professional coaching and training programs.</p>
+              </div>
+          </div>
+          
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  Exclusive Experiences & Travel <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>How many activities can I do in the club?</strong><br>Members can participate in unlimited activities.</p>
+                  <p><strong>Can I organize my own activities?</strong><br>Yes, members can request customized experiences.</p>
+              </div>
+          </div>
+          
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  Payments & Costs <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>What are the general costs involved?</strong><br>Founder Members have zero annual costs; other expenses depend on usage.</p>
+                  <p><strong>How do I pay for additional services?</strong><br>The club operates on a prepaid credit system.</p>
+              </div>
+          </div>
+          
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  Residences & Lifestyle <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>What are ThreeSixty’s private residences?</strong><br>The club owns luxury villas and apartments for members.</p>
+                  <p><strong>Can I use club properties for business trips?</strong><br>Yes, they can be booked for personal or business use.</p>
+              </div>
+          </div>
+          
+          <div class="accordion-item">
+              <div class="accordion-title" onclick="toggleAccordion(this)">
+                  F1 & Motorsports Access <span class="arrow-down">▼</span>
+              </div>
+              <div class="accordion-content">
+                  <p><strong>Can I attend Formula 1 races with the club?</strong><br>Yes, members have VIP access to F1 events.</p>
+                  <p><strong>Can I meet F1 drivers?</strong><br>Yes, members enjoy exclusive behind-the-scenes access.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="bottom">
+        <a href="a7.html">
+          <button>NEXT</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(element) {
+      let content = element.nextElementSibling;
+      let arrow = element.querySelector('.arrow-down');
+      
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+      } else {
+        content.style.display = "block";
+        arrow.style.transform = "rotate(180deg)";
+      }
+    }
+  </script>
+
+</body>
+</html>

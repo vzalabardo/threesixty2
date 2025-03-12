@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Check</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Bai Jamjuree', sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .separator {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      margin-top: 3px;
+      margin-bottom: 1px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .password-input {
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      padding: 10px;
+      margin-top: 8px;
+      font-size: 18px;
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .password-input::placeholder {
+      color: white;
+    }
+
+    .check-btn {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 12px 32px;
+      cursor: pointer;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    .check-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* Animación de cambio de color */
+    .incorrect {
+      background-color: #ff0000;
+      border-color: #ff0000;
+    }
+
+    .correct {
+      background-color: #5bd15b;
+      border-color: #5bd15b;
+      filter: blur(0px);
+    }
+
+    /* Efecto de caída hacia atrás */
+    .fall-effect {
+      animation: fallBack 3s forwards; /* Aumento la duración de la animación */
+    }
+
+    @keyframes fallBack {
+      0% {
+        transform: perspective(600px) rotateX(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: perspective(600px) rotateX(0deg); /* Solo caemos 90 grados */
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <div class="logo">
+      <img src="assets/LogoBlanco.png" alt="Logo">
+    </div>
+    <div class="separator"></div>
+  </div>
+
+  <div class="content">
+    <h2 style="font-weight: lighter;">Password</h2>
+    <input type="password" id="password" class="password-input" placeholder="Enter password">
+  </div>
+
+  <button class="check-btn" onclick="checkPassword()">Check</button>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      var passwordInput = document.getElementById("password");
+
+      if (password === "1234") {
+        passwordInput.classList.remove("incorrect");
+        passwordInput.classList.add("correct");
+        document.body.classList.add("fall-effect");
+
+        // Transición hacia la siguiente página con un retraso
+        setTimeout(function() {
+          window.location.href = "a1.html";  // Cambia este enlace por el de la siguiente página
+        }, 3500); // Espera 3.5 segundos para que la animación termine
+      } else {
+        passwordInput.classList.remove("correct");
+        passwordInput.classList.add("incorrect");
+
+        // Reiniciar el campo después de 1 segundo para que se pueda intentar nuevamente
+        setTimeout(function() {
+          passwordInput.classList.remove("incorrect");
+        }, 1000);
+      }
+    }
+  </script>
+
+</body>
+</html>
