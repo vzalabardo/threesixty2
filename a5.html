@@ -184,20 +184,24 @@
     }
 
     .bottom button {
-      background: transparent;
+      background: rgba(255, 165, 0, 1);
       border: 2px solid white;
-      color: white;
-      font-size: 24px;
+      color: black;
+      font-size: 18px;
+      border-radius: 12px;
       font-weight: bold;
-      font-style: italic;
-      padding: 6px 32px;
+      padding: 6px 64px;
       cursor: pointer;
       text-transform: uppercase;
+      font-style: italic;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+      transition: box-shadow 0.3s ease-in-out;
     }
 
     .bottom button:hover {
-      background: white;
-      color: black;
+      background: rgba(255, 165, 0, 0.9);
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 1);
     }
 
 
@@ -229,73 +233,100 @@
               <div class="accordion-content">
                   <p><strong>How many members are there in the club?</strong><br>The club is limited to 25 Founding Members and 125 General Members to ensure exclusivity.</p>
                   <p><strong>How long does the membership process take?</strong><br>The average waiting time is 30 to 45 days.</p>
-                  <p><strong>How will I know if I’ve been accepted or denied?</strong><br>You will be contacted via email with the final decision.</p>
-                  <p><strong>Can I transfer my membership?</strong><br>No, memberships are non-transferable.</p>
-                  <p><strong>What if I cancel my membership?</strong><br>Please check the membership bylaws for details.</p>
+                  <p><strong>How will I know if I’ve been accepted or denied?</strong><br>If you are accepted by our committee and pass the background check, our team will contact
+                    you via email with the final decision.</p>
+                  <p><strong>Can I transfer my membership?</strong><br>No, memberships are non-transferable. However, you may nominate a replacement upon
+                    resignation, subject to club approval.</p>
+                  <p><strong>What if I cancel my membership?</strong><br>Please check the membership bylaws, as all conditions are outlined there. Our goal is to
+                    maintain a highly active and engaged community.</p>
+                  <p><strong>How do I propose a new member?</strong><br>We encourage members to nominate new candidates. If your nominee is accepted, you will
+                    receive generous club credits to spend on activities. However, the acceptance board is
+                    composed exclusively of Founder Members.</p>
+                  <p><strong>Can I invite family, friends, or business partners to use my membership benefits?</strong><br>Yes, our membership includes activities and experiences for the member and their family,
+                    friends, and corporate guests. However, some benefits are exclusive to members.</p>
+                    <p><strong>How many guests can I bring to non-individual activities?</strong><br>This depends on the type of activity. Full details are available in the "Membership Benefits"
+                      section.</p>
               </div>
           </div>
           
           <div class="accordion-item">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                  Car Ownership, Logistics & Storage <span class="arrow-down">▼</span>
-              </div>
-              <div class="accordion-content">
-                  <p><strong>Can I own my own car?</strong><br>Yes, most members have their private collection.</p>
-                  <p><strong>What is the benefit of buying a car through ThreeSixty?</strong><br>Vehicles will be registered in Andorra, offering savings of 30-35%.</p>
-                  <p><strong>Where will my car be stored?</strong><br>Members can store their vehicles in Andorra or Barcelona.</p>
-              </div>
-          </div>
+            <div class="accordion-title" onclick="toggleAccordion(this)">
+                Car Ownership, Logistics & Storage <span class="arrow-down">▼</span>
+            </div>
+            <div class="accordion-content">
+                <p><strong>Can I own my own car?</strong><br>Yes, most members have their private collection, which is part of the Be Ambitious area in the 16 Be’s program. These collections can focus on road cars, classic cars, or racing cars.</p>
+                <p><strong>What is the benefit of buying a car through ThreeSixty?</strong><br>Vehicles will be registered in Andorra, offering members an average savings of 30-35% on the market price.</p>
+                <p><strong>Does the club have its own cars?</strong><br>Absolutely. The club provides one of the best collections designed to offer the most exceptional driving experiences. This includes classic cars, road cars, racing cars, and family/travel cars.</p>
+                <p><strong>If I want to own my own collection, where will my car be stored?</strong><br>Members can choose to store their vehicles at the Andorra facilities or in our logistics warehouses in Barcelona.</p>
+                <p><strong>Can I use my car in multiple locations throughout Europe?</strong><br>Yes, you can request vehicle transport to any location within Europe.</p>
+                <p><strong>How quickly can the club deliver my car to a new destination?</strong><br>Standard delivery time is 24-48 hours, depending on location.</p>
+                <p><strong>What happens if I sell my car?</strong><br>Please refer to “Be Ambitious Documents” for more information.</p>
+                <p><strong>Are the cars under my name?</strong><br>No, the vehicles are registered under the club, but you have full authority over them, and only the member can decide on their usage or sale.</p>
+                <p><strong>What are the maintenance costs?</strong><br>The average maintenance cost for members is €250/month, which includes basic maintenance, warehouse insurance, and storage.</p>
+                <p><strong>What are all the costs in general?</strong><br>There are no additional fixed costs. Any other expenses are determined by the usage of your car within the club.</p>
+                <p><strong>Can the club help me buy or sell a car?</strong><br>Yes, we offer car acquisition and resale services, including listing on the ThreeSixty marketplace.</p>
+            </div>
+        </div>
           
-          <div class="accordion-item">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                  Driving Experiences & Track Days <span class="arrow-down">▼</span>
-              </div>
-              <div class="accordion-content">
-                  <p><strong>How often can I participate in track days?</strong><br>Members receive a calendar with 6 pre-organized F1 track days per year.</p>
-                  <p><strong>What racing circuits does ThreeSixty have access to?</strong><br>We have access to almost all F1 circuits worldwide.</p>
-                  <p><strong>Do I need prior track experience?</strong><br>No. The club provides professional coaching and training programs.</p>
-              </div>
+        <div class="accordion-item">
+          <div class="accordion-title" onclick="toggleAccordion(this)">
+              Driving Experiences & Track Days <span class="arrow-down">▼</span>
           </div>
+          <div class="accordion-content">
+              <p><strong>How often can I participate in track days?</strong><br>When you become a member, you will receive a calendar with 6 pre-organized F1 track days per year. However, we can organize one-on-one private track days for members anytime, anywhere.</p>
+              <p><strong>What racing circuits does ThreeSixty have access to?</strong><br>We have access to almost all F1 circuits worldwide.</p>
+              <p><strong>Do I need prior track experience to participate?</strong><br>No. The club provides professional coaching and training programs.</p>
+              <p><strong>Can I bring my own race car or use club-provided cars?</strong><br>Both options are available—members can use their own vehicles or choose from the club’s fleet.</p>
+          </div>
+      </div>
+      
           
-          <div class="accordion-item">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                  Exclusive Experiences & Travel <span class="arrow-down">▼</span>
-              </div>
-              <div class="accordion-content">
-                  <p><strong>How many activities can I do in the club?</strong><br>Members can participate in unlimited activities.</p>
-                  <p><strong>Can I organize my own activities?</strong><br>Yes, members can request customized experiences.</p>
-              </div>
-          </div>
+      <div class="accordion-item">
+        <div class="accordion-title" onclick="toggleAccordion(this)">
+            Exclusive Experiences & Travel <span class="arrow-down">▼</span>
+        </div>
+        <div class="accordion-content">
+            <p><strong>How many activities can I do in the club?</strong><br>Members can participate in as many activities as they want—there is no limit.</p>
+            <p><strong>Can I organize my own activities?</strong><br>Yes, members can:<br>Join pre-organized activities with the club.<br>
+              Request fully customized experiences at any time of the year.</p>
+
+            <p><strong>What destinations does the club cover for trips?</strong><br>The club operates across Europe and the US, offering high-end curated experiences.</p>
+            <p><strong>What if my plans change last minute?</strong><br>We understand that flexibility is key. That’s why we always prepare Plan B, C, and D to adapt to your needs.</p>
+            <p><strong>Will I have a dedicated team assisting me during trips?</strong><br>Yes, members have a concierge team available 24/7 to manage logistics, reservations, and last-minute changes—including a support team following you anywhere if required.</p>
+        </div>
+    </div>
+    
           
-          <div class="accordion-item">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                  Payments & Costs <span class="arrow-down">▼</span>
-              </div>
-              <div class="accordion-content">
-                  <p><strong>What are the general costs involved?</strong><br>Founder Members have zero annual costs; other expenses depend on usage.</p>
-                  <p><strong>How do I pay for additional services?</strong><br>The club operates on a prepaid credit system.</p>
-              </div>
-          </div>
-          
-          <div class="accordion-item">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                  Residences & Lifestyle <span class="arrow-down">▼</span>
-              </div>
-              <div class="accordion-content">
-                  <p><strong>What are ThreeSixty’s private residences?</strong><br>The club owns luxury villas and apartments for members.</p>
-                  <p><strong>Can I use club properties for business trips?</strong><br>Yes, they can be booked for personal or business use.</p>
-              </div>
-          </div>
-          
-          <div class="accordion-item">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                  F1 & Motorsports Access <span class="arrow-down">▼</span>
-              </div>
-              <div class="accordion-content">
-                  <p><strong>Can I attend Formula 1 races with the club?</strong><br>Yes, members have VIP access to F1 events.</p>
-                  <p><strong>Can I meet F1 drivers?</strong><br>Yes, members enjoy exclusive behind-the-scenes access.</p>
-              </div>
-          </div>
+    <div class="accordion-item">
+      <div class="accordion-title" onclick="toggleAccordion(this)">
+          Payments & Costs <span class="arrow-down">▼</span>
+      </div>
+      <div class="accordion-content">
+          <p><strong>What are the general costs involved?</strong><br>Founder Members have zero annual costs. Any additional expenses will be determined by individual usage.</p>
+          <p><strong>How do I pay for additional services or experiences?</strong><br>The club operates on a prepaid credit system, ensuring seamless transactions without interruptions.</p>
+      </div>
+  </div>
+  
+  <div class="accordion-item">
+      <div class="accordion-title" onclick="toggleAccordion(this)">
+          Residences & Lifestyle <span class="arrow-down">▼</span>
+      </div>
+      <div class="accordion-content">
+          <p><strong>What are ThreeSixty’s private residences, and how do I book them?</strong><br>The club owns luxury villas and apartments, available exclusively for members.</p>
+          <p><strong>Can I use club properties for personal or business trips?</strong><br>Yes, club properties can be booked for personal vacations or private business retreats. Founder Members have free access to these properties. Please check the membership bylaws for full details.</p>
+          <p><strong>Does the club offer concierge services during my stay?</strong><br>Yes, full concierge services are available, including chauffeurs, personal chefs, local experiences, and much more.</p>
+      </div>
+  </div>
+  
+  <div class="accordion-item">
+      <div class="accordion-title" onclick="toggleAccordion(this)">
+          F1 & Motorsports Access <span class="arrow-down">▼</span>
+      </div>
+      <div class="accordion-content">
+          <p><strong>Can I attend Formula 1 races with the club?</strong><br>Yes, ThreeSixty members can access VIP hospitality and paddock areas for F1 events.</p>
+          <p><strong>Can I meet F1 drivers or visit the paddock with the club?</strong><br>Yes, members enjoy exclusive behind-the-scenes access at select events.</p>
+      </div>
+  </div>
       </div>
 
       <div class="bottom">
