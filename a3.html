@@ -135,7 +135,8 @@
 
     <div class="section">
       <p>And because we know your time is valuable, you can also share your lawyer's email-we'll make sure they receive everything directly as well.</p>
-      <input type="email" placeholder="Enter your lawyer's email">
+      <input type="email" name="user_email" placeholder="Your email" required>
+      <input type="email" name="lawyer_email" placeholder="Your lawyer's email" required>
     </div>
 
     <div class="section white-text">
@@ -144,11 +145,50 @@
     </div>
 
     <div class="section">
-      <a href="a4a.html">
-        <button class="next-btn">NEXT</button>
-      </a>
+      <button class="next-btn" onclick="sendEmail()">NEXT</button>
     </div>
-  </div>
 
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("ZtLScWVUuO385MIPx"); // Tu User ID de EmailJS
+    })();
+  
+    function sendEmail() {
+      const userEmail = document.querySelector('input[name="user_email"]').value.trim();
+      const lawyerEmail = document.querySelector('input[name="lawyer_email"]').value.trim();
+      const button = document.querySelector('.next-btn');
+  
+      // Desactiva botón
+      button.disabled = true;
+      button.innerText = "Sending...";
+  
+      // Si no hay ningún email, simplemente seguimos sin enviar
+      if (!userEmail && !lawyerEmail) {
+        window.location.href = "a4.html";
+        return;
+      }
+  
+      const templateParams = {
+        user_email: userEmail || "none",
+        lawyer_email: lawyerEmail || "none"
+      };
+  
+      emailjs.send("service_hixalal", "template_ju02sds", templateParams)
+        .then(function(response) {
+          console.log("Email sent!", response.status, response.text);
+          window.location.href = "a4.html";
+        }, function(error) {
+          console.error("Email failed to send:", error);
+          alert("Error sending email. Please try again.");
+          button.disabled = false;
+          button.innerText = "NEXT";
+        });
+    }
+  </script>
+  
+  
 </body>
 </html>
